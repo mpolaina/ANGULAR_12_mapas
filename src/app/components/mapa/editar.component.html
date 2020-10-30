@@ -1,0 +1,24 @@
+<div class="modal-editar">
+    <h1>Editar Marcador</h1>
+    <form [formGroup]="forma">
+      <mat-form-field>
+        <mat-label>Título</mat-label>
+        <input matInput placeholder="Título" formControlName="titulo">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea rows="3" matInput placeholder="Descripción" formControlName="desc"></textarea>
+      </mat-form-field>
+      <div class="botones">
+        <button mat-flat-button color="primary" class="mr-2"
+                  (click)="guardarCambios()">
+          Guardar
+        </button>
+        <button mat-flat-button color="warn" type="button"
+                 (click)="onNoClick()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+</div>
